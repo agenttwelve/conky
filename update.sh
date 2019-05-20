@@ -1,4 +1,5 @@
 #!/bin/bash
 cd /home/agenttwelve
-sudo git pull https://github.com/agenttwelve/conky
+unset GIT_DIR
+sudo git pull
 sudo cp -rf /home/agenttwelve/conky/conky.conf /etc/conky
