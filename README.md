@@ -5,7 +5,9 @@ The install guide is assuming you already have Conky installed and your configur
 
 ## Pre-Requisites
 Git
+
 Conky
+
 LSB (Used to detect OS)
 ```bash
 sudo apt-get install lsb -y
