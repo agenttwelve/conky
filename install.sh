@@ -1,7 +1,7 @@
 #!/bin/bash
 
 gpu=$(test -f /etc/X11/xorg.conf; echo $?);
-os=$(lsb_release -d | cut -e14-)
+os=$(lsb_release -d | cut -c14-)
 
 if [[ "$os" =~ "Pop!" ]]; then
  sudo cp -rf /assets/popos-logo.png /etc/conky/os-logo.png && echo Pop!_OS Detected
