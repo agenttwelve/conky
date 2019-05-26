@@ -16,6 +16,7 @@ sudo apt-get install lsb -y
 ## Install
 To install, clone the master directory into your Home directory.
 ```bash
+cd ~
 sudo git clone https://github.com/agenttwelve/conky
 ```
 
