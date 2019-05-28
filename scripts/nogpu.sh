@@ -26,7 +26,7 @@ elif [ "$cores" == 12 ]; then
 fi;
 
 echo Updating configuration with correct network interface
-sed -i -e "s/acinet/$net/g" /etc/conky/conky.con
+sed -i -e "s/acinet/$net/g" /etc/conky/conky.conf
 
 sudo killall conky
 sudo conky -q
