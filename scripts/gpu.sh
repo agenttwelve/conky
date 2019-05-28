@@ -1,6 +1,8 @@
 #!/bin/bash
 
 cores=$(cat /proc/cpuinfo | grep processor | wc -l);
+net=$(route | grep '^default' | grep -o '[^ ]*$');
+
 if [ "$cores" == 1 ]; then
   echo One CPU detected...
   sudo cp -rf ~/conky/configs/gpu/gpu1core.conf /etc/conky/conky.conf && echo Updated Configuration
@@ -22,6 +24,9 @@ elif [ "$cores" == 12 ]; then
   sudo cp -rf ~/conky/configs/gpu/gpu12core.conf /etc/conky/conky.conf && echo Updated Configuration
 
 fi;
+
+echo Updating configuration with correct network interface
+sed -i -e "s/acinet/$net/g" /etc/conky/conky.conf
 
 sudo killall conky
 sudo conky -q
