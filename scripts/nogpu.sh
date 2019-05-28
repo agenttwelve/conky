@@ -26,4 +26,4 @@ elif [ "$cores" == 12 ]; then
 fi;
 
 sudo killall conky
-sudo conky
+sudo conky -q
