@@ -4,11 +4,11 @@ This is my current Conky interface. It can currently be used to detect 1, 2, 4, 
 ## Pre-Requisites
 Git
 
-Conky
+Conky-All
 
 LSB (Used to detect OS)
 ```bash
-sudo apt-get install lsb -y
+sudo apt-get install lsb conky-all -y
 ```
 
 ## Install
