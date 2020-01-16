@@ -20,7 +20,7 @@ sudo git clone https://github.com/agenttwelve/conky
 
 Then enter the directory 
 ```bash
-cd /conky
+cd conky
 ```
 Execute the install command
 ```bash
