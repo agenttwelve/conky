@@ -1,6 +1,6 @@
 #!/bin/bash
 
-gpu=$(test -f /etc/X11/xorg.conf; echo $?);
+gpu=$(glxinfo -B | sed -n 8p | cut -c22-);
 os=$(lsb_release -d | cut -c14-);
 
 if [[ "$os" =~ "Pop!" ]]; then
@@ -24,10 +24,10 @@ elif [[ "$os" =~ "Raspbian" ]]; then
 fi;
 
 
-if [ "$gpu" == 1 ]; then
-  echo Dedicated GPU not detected
-  ( "scripts/nogpu.sh" )
-else
+if [[ "$gpu" =~ "NVIDIA Corporation" ]]; then
   echo Dedicated GPU found
   ( "scripts/gpu.sh" )
+else
+  echo Dedicated GPU not detected
+  ( "scripts/nogpu.sh" )
 fi;
