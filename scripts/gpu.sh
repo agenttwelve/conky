@@ -2,6 +2,7 @@
 
 cores=$(cat /proc/cpuinfo | grep processor | wc -l);
 net=$(route | grep '^default' | grep -o '[^ ]*$');
+mon=$(xrandr | grep " connected " | awk '{ print$1 }' | wc -l);
 
 if [ "$cores" == 1 ]; then
   echo One CPU detected...
@@ -27,6 +28,9 @@ fi;
 
 echo Updating configuration with correct network interface
 sudo sed -i -e "s/acinet/$net/g" /etc/conky/conky.conf
+
+echo Moving conky to right-most display
+sudo sed -i -e "s/acmon/$mon/g" /etc/conky/conky.conf
 
 sudo killall conky
 sudo conky -q
