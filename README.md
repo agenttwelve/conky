@@ -23,3 +23,7 @@ Execute the install command
 ```bash
 ./install.sh
 ```
+
+
+##Screenshot
+![image](https://user-images.githubusercontent.com/40524971/72910489-978e3980-3d06-11ea-870c-c7cbd3434411.png)
