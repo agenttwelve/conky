@@ -26,4 +26,4 @@ Execute the install command
 
 
 ## Screenshot
-<img src="https://user-images.githubusercontent.com/40524971/72910489-978e3980-3d06-11ea-870c-c7cbd3434411.png" alt="screenshot" width="200" height="500">
+<img src="https://user-images.githubusercontent.com/40524971/72910489-978e3980-3d06-11ea-870c-c7cbd3434411.png" alt="screenshot" width="300" height="500">
