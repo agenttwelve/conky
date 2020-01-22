@@ -1,4 +1,4 @@
-# Pre-Requisites
+# Prerequisites
 Git
 
 Conky-All
