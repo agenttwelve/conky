@@ -1,11 +1,22 @@
 # Prerequisites
 Git
+```bash
+sudo apt-get install git -y
+```
 
 Conky-All
+```bash
+sudo apt-get install conky-all -y
+```
+
+Mesa-utils (Used to detect GPU)
+```bash
+sudo apt-get install mesa-utils -y
+```
 
 LSB (Used to detect OS)
 ```bash
-sudo apt-get install lsb conky-all -y
+sudo apt-get install lsb-release -y
 ```
 
 ## Install
